@@ -2,5 +2,5 @@
 @include('layouts.sidebar')
     @yield('homenav')
 @include('layouts.content')
-    @yield('home')
+    @yield('video')
 @include('layouts.footer')

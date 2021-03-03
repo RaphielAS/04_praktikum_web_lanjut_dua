@@ -1,6 +1,6 @@
 @include('layouts.header')
 @include('layouts.sidebar')
-    @yield('homenav')
+    @yield('contactnav')
 @include('layouts.content')
-    @yield('home')
+    @yield('contact')
 @include('layouts.footer')
