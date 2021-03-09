@@ -215,7 +215,7 @@
             timeout = setTimeout(setVideoSize, 100);
         };
 
-        // Play/Pause button for video background      
+        // Play/Pause button for video background
         const btn = $("#tm-video-control-button");
 
         btn.on("click", function(e) {
@@ -349,7 +349,8 @@
             <div class="mx-auto pb-3 tm-about-text-container px-3">
                 <div class="row">
                     <div class="col-lg-6 mb-5">
-                        <form id="contact-form" action="" method="POST" class="tm-contact-form">
+                        <form id="contact-form" action="/upload" method="POST" class="tm-contact-form">
+                            @csrf
                             <div class="form-group">
                                 <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required="" />
                             </div>

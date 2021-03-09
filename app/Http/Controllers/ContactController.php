@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
+use CreateMessagesTable;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -13,7 +15,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contact');    
+        return view('contact');
     }
 
     /**
@@ -35,6 +37,13 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         //
+        Message::create([
+            'name' => request('name'),
+            'email' => request('email'),
+            'inquiry' => request('inquiry'),
+            'message' => request('message')
+        ]);
+        return redirect()->back();
     }
 
     /**
